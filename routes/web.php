@@ -12,7 +12,7 @@
 */
 
 //BookController
-Route::get('/', 'BookController@index');
+Route::get('/', 'BookController@index')->middleware('auth');
 
 Route::get('/novel', 'BookController@novel');
 
