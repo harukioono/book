@@ -1,0 +1,133 @@
+/*
+場所に関係なくタグで指定
+*/
+body{
+    margin: 0px;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+/*
+ここは一番上の「ホーム」～「My本棚」の部分
+*/
+
+.flex{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.headregion{
+    
+    margin: 0px;
+    text-align: center;
+    color: #fff;
+    width: 135px;
+    flex-wrap: wrap;
+    background-color: #99CC99;
+    border:  solid 1px #00CC66;
+    padding: 20px 60px;
+}
+
+
+
+
+
+/*
+ここはh1の「愛読者の森」の部分
+*/
+
+.booklikeforset{
+    margin-top: 60px;
+    clear: left;
+    text-align: center;
+}
+
+/*
+ここからはジャンルの部分
+*/
+
+.genre{
+    text-align: center;
+    background-color: #FF9900;
+    margin-left: 380px;
+    margin-right: 380px;
+    margin-bottom: 0px
+}
+
+.genre-contents{
+    display: block;
+    width: 760px;
+    height: 170px;
+    background-color: #FFFFCC;
+    margin-left: 380px;
+} 
+
+.border-and-float{
+    border: solid;
+    border-radius: 3px;
+    float: left;
+}
+
+.clear{
+    clear: left;
+}
+
+.margin-padding-color-sf{
+    
+    padding: 10px 90px;
+    margin-left: 20px;
+    background-color: #00CCFF;
+    color:#fff;
+}
+
+.margin-padding-color-myst{
+    
+    padding: 10px 60px;
+    margin-left: 50px;
+    background-color:#CC6633;
+    color:#bbb;
+}
+
+.margin-padding-color-lo{
+    padding: 10px 84px;
+    margin-left: 50px;
+    background-color:#FFCCCC;
+    color:#00CCFF;
+}
+
+.margin-padding-color-ho{
+    padding: 10px 76px;
+    margin-left: 20px;
+    background-color: #000;
+    color:#f00;
+}
+
+.margin-padding-color-sh{
+    padding: 10px 84px;
+    margin-left: 50px;
+    background-color:#CCCC00;
+    color:#33FF33;
+}
+
+.margin-padding-color-fa{
+    padding: 10px 51.5px;
+    margin-left: 50px;
+    background-color:#3333FF;
+    color:#FF6600;
+}
+/*
+ここからは検索結果の部分
+*/
+.booktitle{
+    float: left;
+    margin-right: 50px;
+}
+
+.bookauthor{
+    clear: left;
+}
