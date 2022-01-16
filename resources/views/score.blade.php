@@ -12,7 +12,7 @@
         <a href="/novel"><p class='headregion'>小説</p></a>
         <a href="/comic"><p class='headregion'>漫画</p></a>
         <a href="/search"><p class='headregion'>検索</p></a>
-        <a href="/novel"><p class='headregion padding-r'>ランキング</p></a>
+        <a href="/ranking"><p class='headregion padding-r'>ランキング</p></a>
         <a href="/bookmark"><p class='headregion padding-m'>My本棚</p></a>
     </div>
     

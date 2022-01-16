@@ -46,7 +46,7 @@ class ScoreController extends Controller
         
         $bookid = (int)$request['book_id'];
         
-    //dd(gettype($bookid));
+    
         $score->fill([
          'user_id'=>Auth::user()->id,
          'book_id'=>$bookid,
@@ -54,7 +54,7 @@ class ScoreController extends Controller
          'comment'=>$request["book.comment"],
          
         ])->save();
-        //$this->index($bookid);
+        
         return redirect('/book/'.$bookid);
     }
 }

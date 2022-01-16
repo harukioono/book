@@ -45,5 +45,8 @@ Route::post('/bookmark/{book}','BookMarkController@store');
 
 Route::delete('/bookmark/{book}','BookMarkController@destroy');
 
+//RankingController
+Route::get('/ranking','RankingController@index');
+
 //HomeController
 Route::get('/home', 'HomeController@index')->name('home');

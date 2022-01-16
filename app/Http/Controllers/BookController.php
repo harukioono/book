@@ -15,6 +15,9 @@ class BookController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+     
+     
+     //ホーム画面の表示
     public function index()
     {
         return view('index');
@@ -25,16 +28,20 @@ class BookController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+     
+     //小説の画面の表示
     public function novel()
     {
         return view('novel');
     }
     
+    //漫画の画面の表示
     public function comic()
     {
         return view('comic');
     }
     
+    //検索画面の表示
     public function search()
     {
         $user_id = Auth::id();
@@ -47,6 +54,8 @@ class BookController extends Controller
                     
     }
     
+    
+    //Mｙ本棚の画面の表示
     public function bookmark(Bookmark $bookmark)
     {
         $bookmarks=$bookmark->where('user_id',Auth::user()->id)->get();
@@ -57,7 +66,7 @@ class BookController extends Controller
     }
        
            
-       
+       //APIの取得と登録
     public function bookapi()
     {
         
@@ -87,8 +96,7 @@ class BookController extends Controller
         
         
         
-           
-       
+           //これが登録
            foreach($books as $item)
            {
                
@@ -106,6 +114,7 @@ class BookController extends Controller
     }
     
     
+    //検索結果の表示
      public function searchExecute(Request $request )
     {
         
@@ -117,11 +126,10 @@ class BookController extends Controller
         if(isset($request["booklist"]))
         {
             //入力チェック
-            
             if(!empty("booklist"))
             {
                 
-                
+                //本のidとタイトルと筆者名をグループ化
                 $groupby = Book::select('id','title','author')->groupBy('title')->groupBy('author')->groupBy('id');
                 
                 
