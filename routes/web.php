@@ -16,7 +16,15 @@ Route::get('/', 'BookController@index')->middleware('auth');
 
 Route::get('/novel', 'BookController@novel');
 
+Route::get('/novel/execute','BookController@novelExecute');
+
+Route::post('/novel/execute','BookController@novelExecute');
+
 Route::get('/comic', 'BookController@comic');
+
+Route::get('/comic/execute','BookController@comicExecute');
+
+Route::post('/comic/execute','BookController@comicExecute');
 
 Route::get('/search', 'BookController@search');
 
@@ -25,6 +33,10 @@ Route::get('/bookmark','BookController@bookmark');
 Auth::routes();
 
 Route::post('/search/save', 'BookController@bookapi');
+
+Route::post('/search/imagesave', 'BookController@bookimageapi');
+
+Route::get('/search/execute', 'BookController@searchExecute');
 
 Route::post('/search/execute', 'BookController@searchExecute');
 

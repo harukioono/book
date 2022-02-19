@@ -48,7 +48,7 @@ a{
 }
 
 /*
-ここからはジャンルの部分
+ジャンルの部分
 */
 
 .genre{
@@ -121,13 +121,133 @@ a{
     color:#FF6600;
 }
 /*
-ここからは検索結果の部分
+本の画像とタイトルの表示
 */
 .booktitle{
     float: left;
     margin-right: 50px;
 }
 
-.bookauthor{
+.up{
     clear: left;
+}
+
+/*
+ページ送りを中央に寄せる＆横並びに
+*/
+.pagination{
+    text-align: center;
+}
+
+/* 
+ページ送りを横並びに 
+*/
+.pagination li{
+    display: inline-block;
+    color:#fff;
+    background-color: #99CC99;
+}
+
+/*
+ページ送りの色変更
+*/
+.pagination_color{
+    color: #99CC99;
+    
+}
+
+/*
+ページ送りの数字の幅と色変更
+*/
+.page-item{
+    background-color: #fff;
+    border:  solid 2px #99CC99;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+
+/*
+一番上の[ランキング]の部分
+*/
+
+.ranking{
+    font-size:60px;
+	text-align:center;
+	line-height:0.95em;
+	font-weight:bold;
+	color: transparent;
+	background: repeating-linear-gradient(0deg, #B67B03 0.1em, #DAAF08 0.2em, #FEE9A0 0.3em, #DAAF08 0.4em, #B67B03 0.5em); 
+	-webkit-background-clip: text;
+}
+
+
+/*
+ランキングの数字と「位」の設定変更
+*/
+
+.rank1_background-color{
+    
+    border-bottom: solid 10px #fa0;
+    border-top: solid 10px #fa0;
+}
+
+.rank1{
+    font-size: 100px;
+    color: #fa0;
+}
+
+.ranks1{
+    font-size: 80px;
+    
+}
+
+.rank2_background-color{
+    
+    border-bottom: solid 10px #bbb;
+    border-top: solid 10px #bbb;
+}
+
+.rank2{
+    font-size: 80px;
+    color: #bbb;
+}
+
+.ranks2{
+    font-size: 60px;
+}
+
+.rank3_background-color{
+    
+    border-bottom: solid 10px #930;
+    border-top: solid 10px #930;
+}
+
+.rank3{
+    font-size: 60px;
+    color: #930;
+}
+
+.ranks3{
+    font-size: 40px;
+}
+
+
+
+/*
+ランキングの本の画像やタイトルなどの位置を中心に
+*/
+
+.ranking_placing{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*
+検索ボタンを非表示にする
+*/
+
+.searchButton{
+    visibility:hidden;
 }

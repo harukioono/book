@@ -16,7 +16,7 @@
         <a href="/bookmark"><p class='headregion padding-m'>My本棚</p></a>
     </div>
     
-    
+    <img src="{{$book->largeImageUrl}}" alt="画像無し" width="250" height="300">
     <p>{{$book->title}}</p>
     
 @if (Auth::check())
@@ -25,16 +25,17 @@
     
     @csrf
     @method('DELETE')
-        <button type="submit">
-          ブックマーク解除
+        <button type="submit" onClick="return confirm('{{$book->title}}のお気に入り登録を解除しました！');">
+          お気に入り登録解除
         </button>
     </form>
     @else
     <form action="/bookmark/{{$book->id}}" method="POST" class="mb-4" >
     @csrf
     <input type="hidden" name="book_id" value="{{$book->id}}">
-        <button type="submit">
-         ブックマーク
+    
+        <button type="submit" name="bookmark" onClick="return confirm('{{$book->title}}をお気に入り登録しました！');">
+         お気に入り登録
         </button>
     </form>
 

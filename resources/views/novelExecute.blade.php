@@ -19,7 +19,6 @@
         <a href="https://e074290610f6499d90412db18c5418c9.vfs.cloud9.ap-northeast-1.amazonaws.com/novel#novel_test"><p id="novel_return" class='up'>▼ページ最下部へ</p></a> 
         <h2 class='genre'>ジャンル(小説)</h2>
     <div class='genre-contents'>
-        
     <form action="/novel/execute" method="POST">
         @csrf
         <p class='border-and-float  margin-padding-color-sf'><input type="submit" name="mystery-suspense" value="ミステリー・サスペンス"></p>
@@ -31,9 +30,7 @@
         <p class='border-and-float margin-padding-color-fa'><input type="submit" name="romance" value="ロマンス"></p>
         <p class='border-and-float margin-padding-color-fa'><input type="submit" name="other" value="その他"></p>
     </form>
-    
     </div>
-        
         
     @foreach($book->unique('title') as $books)
     <div class='booktitle'>

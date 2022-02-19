@@ -16,8 +16,13 @@
         <a href="/bookmark"><p class='headregion padding-m'>My本棚</p></a>
     </div>
         <p>bookmark</p>
+        
         @foreach($bookmarks as $bookmark)
-       <p>{{$bookmark->book->title}}</p>
+        <div class='booktitle'>
+        <a href="/books/{{$bookmark->book->id}}"><img src="{{$bookmark->book->largeImageUrl}}" width="250" height="300"></a>
+       <a href="/books/{{$bookmark->book->id}}"><p>{{Str::limit($bookmark->book->title,30)}}</p></a>
+       </div>
         @endforeach
+        
     </body>
 </html>

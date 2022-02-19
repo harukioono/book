@@ -13,7 +13,11 @@ class Book extends Model
         'link',
         'author',
         'category',
-        'guid'
+        'guid',
+        'isbn',
+        'booksGenreId',
+        'publisherName',
+        'largeImageUrl'
         ];
         
     public function bookmarks()
@@ -24,5 +28,10 @@ class Book extends Model
     public function scores()
     {
         return $this->hasMany('App\Score');
+    }
+    
+    public function comics()
+    {
+        return $this->hasOne('App\Comic');
     }
 }

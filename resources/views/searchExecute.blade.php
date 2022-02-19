@@ -16,25 +16,47 @@
         <a href="/bookmark"><p class='headregion padding-m'>My本棚</p></a>
     </div>
         
-       <form id="form1" action="/search/execute" method="POST">
+    <script src="{{ asset('/js/book.js') }}"></script>
+        
+       <form id="form1" name="searchForm" action="/search/execute" method="POST">
            @csrf
-        <input id="sbox1" id="s" name="booklist" type="text" placeholder="作品名・作者名を入力" />
-        <input id="sbtn1" name="search" type="submit" value="検索" />
+        <input id="sbox1" id="s" name="booklist" type="text" placeholder="作品名・作者名を入力" oninput="SearchButton_Click()"/>
+        <input class='searchButton' id="sbtn1" name="search" type="submit" value="検索" onkeydown="SearchButton_KeyDown()"/>
        </form>
        
-      
-       
- @foreach($title as $book)
- <div class='booktitle'>
-     <a href="/books/{{$book->id}}"><p>{{$book->title}}</p></a>
- </div>
- @endforeach
+       <a href="https://e074290610f6499d90412db18c5418c9.vfs.cloud9.ap-northeast-1.amazonaws.com/search/execute#searchExecute_test"><p id="searchExecute_return" class='up'>▼ページ最下部へ</p></a>
+
+  
+   @foreach($title->unique('title') as $book)
+    
+   
+   <div class='booktitle'>
+       @if($book->largeImageUrl == NULL)
+       <a href="/books/{{$book->id}}"><img src="{{$book->largeImageUrl =  'https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/noimage_01.gif?_ex=200x20'}}"  width="250" height="300"></a>
+       <a href="/books/{{$book->id}}"><p>{{Str::limit($book->title,30)}}</p></a>
+     
+       @else
+       <a href="/books/{{$book->id}}"><img src="{{$book->largeImageUrl}}"  width="250" height="300"></a>
+       <a href="/books/{{$book->id}}"><p>{{Str::limit($book->title,30)}}</p></a>
+       @endif
+   </div>
+　 
+     
+   @endforeach
+   
+
+
+ @if($errors->any())
+     @foreach ($errors->all() as $error)
+	   <li>{{ $error }}</li>
+	 @endforeach
+ @endif
  
 <div>
-        
+        <div class='up pagination_color'>{{ $title->links('vendor.pagination.bootstrap-4') }}</div>
     </div>
 
-       </p>
+       <a href="https://e074290610f6499d90412db18c5418c9.vfs.cloud9.ap-northeast-1.amazonaws.com/search/execute#searchExecute_return"><p id="searchExecute_test" class='up'>▲ページ最上部へ</p></a>
     </body>
     
 </html>

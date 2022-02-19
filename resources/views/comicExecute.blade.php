@@ -16,11 +16,10 @@
         <a href="/bookmark"><p class='headregion padding-m'>My本棚</p></a>
     </div>
         
-        <a href="https://e074290610f6499d90412db18c5418c9.vfs.cloud9.ap-northeast-1.amazonaws.com/comic#comic_test"><p id="comic_return">▼ページ最下部へ</p></a>
+        <a href="https://e074290610f6499d90412db18c5418c9.vfs.cloud9.ap-northeast-1.amazonaws.com/comic/execute#comicExecute_test"><p id="comicExecute_return">▼ページ最下部へ</p></a>
         <h2 class='genre'>ジャンル(漫画)</h2>
     <div class='genre-contents'>
-    
-    
+        
     <form action="/comic/execute" method="POST">
         @csrf
         <p class='border-and-float  margin-padding-color-sf'><input type="submit" name="boy" value="少年"></p>
@@ -31,15 +30,15 @@
         <p class='border-and-float  margin-padding-color-fa'><input type="submit" name="other" value="その他"></p>
         
     </form>
-    
     </div>
-    
+    <p>earvzvr</p>
     
     @foreach($book->unique('title') as $books)
     <div class='booktitle'>
     
-    
     <a href="/books/{{$books->id}}"><img src="{{$books->largeImageUrl}}" width="250" height="300"></a>
+    <p>{{$books->id}}</p>
+    <p>{{$books->booksGenreId}}</p>
     <a href="/books/{{$books->id}}"><p>{{Str::limit($books->title,30)}}</p></a>
     
     
@@ -48,6 +47,6 @@
     
     <div class='up pagination_color'>{{ $book->links('vendor.pagination.bootstrap-4') }}</div>
     
-    <a href="https://e074290610f6499d90412db18c5418c9.vfs.cloud9.ap-northeast-1.amazonaws.com/comic#comic_return"><p id="comic_test" class='up'>▲ページ最上部へ</p></a>
+    <a href="https://e074290610f6499d90412db18c5418c9.vfs.cloud9.ap-northeast-1.amazonaws.com/comic/execute#comicExecute_return"><p id="comicExecute_test" class='up'>▲ページ最上部へ</p></a>
     </body>
 </html>
