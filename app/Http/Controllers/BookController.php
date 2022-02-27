@@ -255,7 +255,7 @@ class BookController extends Controller
         $rakutenn_books = $rakutenn_booklist['Items'];
             
            
-        dd($rakutenn_booklist);
+        //dd($rakutenn_booklist);
         
         
         //楽天ブックスジャンル
