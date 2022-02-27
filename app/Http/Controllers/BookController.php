@@ -234,7 +234,7 @@ class BookController extends Controller
         
         
         //楽天ブックス書籍検索
-        $rakutenn_url = 'https://app.rakuten.co.jp/services/api/BooksBook/Search/20170404?applicationId=1070968634966804263';
+        $rakutenn_url = 'https://app.rakuten.co.jp/services/api/BooksBook/Search/20170404?applicationId=1070968634966804263&page=2';
        
        
         $rakutenn_response = $client->request(
@@ -282,15 +282,15 @@ class BookController extends Controller
         
         
         
-       for($i=0;$i<count($books);$i++)
-       {
-           $books[$i] += ["isbn" => null];
-           $books[$i] += ["booksGenreId" => null];
-           $books[$i] += ["publisherName" => null];
-           $books[$i] += ["largeImageUrl" => null];
-           array_push($bookbook,$books[$i]);
+      // for($i=0;$i<count($books);$i++)
+      // {
+           //$books[$i] += ["isbn" => null];
+           //$books[$i] += ["booksGenreId" => null];
+           //$books[$i] += ["publisherName" => null];
+           //$books[$i] += ["largeImageUrl" => null];
+          // array_push($bookbook,$books[$i]);
            
-       }
+       //}
         
         
         
