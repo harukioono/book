@@ -234,7 +234,7 @@ class BookController extends Controller
         
         
         //楽天ブックス書籍検索
-        $rakutenn_url = 'https://app.rakuten.co.jp/services/api/BooksBook/Search/20170404?applicationId=1070968634966804263&page=70';
+        $rakutenn_url = 'https://app.rakuten.co.jp/services/api/BooksBook/Search/20170404?applicationId=1070968634966804263&page=71';
        
        
         $rakutenn_response = $client->request(
