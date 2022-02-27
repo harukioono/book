@@ -203,7 +203,7 @@ class BookController extends Controller
         $client = new \GuzzleHttp\Client();
 
         //本のタイトルや筆者名等のAPI
-        $url = 'https://iss.ndl.go.jp/api/opensearch?dpid=refkyo';
+        $url = 'https://iss.ndl.go.jp/api/opensearch?dpid=aozora';
 
         $response = $client->request(
             'GET',
@@ -225,7 +225,7 @@ class BookController extends Controller
         
         $booklist= json_decode($booklist,true);
         
-        dd($booklist);
+        //dd($booklist);
 
         $books=$booklist['channel']['item'];
         
@@ -255,7 +255,7 @@ class BookController extends Controller
         $rakutenn_books = $rakutenn_booklist['Items'];
             
            
-        //dd($rakutenn_booklist);
+        dd($rakutenn_booklist);
         
         
         //楽天ブックスジャンル
@@ -282,15 +282,15 @@ class BookController extends Controller
         
         
         
-       //for($i=0;$i<count($books);$i++)
-       //{
-           //$books[$i] += ["isbn" => null];
-           //$books[$i] += ["booksGenreId" => null];
-           //$books[$i] += ["publisherName" => null];
-           //$books[$i] += ["largeImageUrl" => null];
-           //array_push($bookbook,$books[$i]);
+       for($i=0;$i<count($books);$i++)
+       {
+           $books[$i] += ["isbn" => null];
+           $books[$i] += ["booksGenreId" => null];
+           $books[$i] += ["publisherName" => null];
+           $books[$i] += ["largeImageUrl" => null];
+           array_push($bookbook,$books[$i]);
            
-       //}
+       }
         
         
         
