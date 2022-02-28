@@ -16,7 +16,7 @@
         <a href="/bookmark"><p class='headregion padding-m'>My本棚</p></a>
     </div>
        
-        <a href="https://e074290610f6499d90412db18c5418c9.vfs.cloud9.ap-northeast-1.amazonaws.com/novel#novel_test"><p id="novel_return" class='up'>▼ページ最下部へ</p></a> 
+        <a href="#novel_test"><p id="novel_return" class='up'>▼ページ最下部へ</p></a> 
         <h2 class='genre'>ジャンル(小説)</h2>
     <div class='genre-contents'>
     <form action="/novel/execute" method="POST">
@@ -43,6 +43,6 @@
         
     <div class='up pagination_color'>{{ $book->links('vendor.pagination.bootstrap-4') }}</div>
         
-    <a href="https://e074290610f6499d90412db18c5418c9.vfs.cloud9.ap-northeast-1.amazonaws.com/novel#novel_return"><p id="novel_test" class='up'>▲ページ最上部へ</p></a>    
+    <a href="#novel_return"><p id="novel_test" class='up'>▲ページ最上部へ</p></a>    
     </body>
 </html>

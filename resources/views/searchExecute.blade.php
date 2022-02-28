@@ -24,7 +24,7 @@
         <input class='searchButton' id="sbtn1" name="search" type="submit" value="検索" onkeydown="SearchButton_KeyDown()"/>
        </form>
        
-       <a href="https://e074290610f6499d90412db18c5418c9.vfs.cloud9.ap-northeast-1.amazonaws.com/search/execute#searchExecute_test"><p id="searchExecute_return" class='up'>▼ページ最下部へ</p></a>
+       <a href="#searchExecute_test"><p id="searchExecute_return" class='up'>▼ページ最下部へ</p></a>
 
   
    @foreach($title->unique('title') as $book)
@@ -56,7 +56,7 @@
         <div class='up pagination_color'>{{ $title->links('vendor.pagination.bootstrap-4') }}</div>
     </div>
 
-       <a href="https://e074290610f6499d90412db18c5418c9.vfs.cloud9.ap-northeast-1.amazonaws.com/search/execute#searchExecute_return"><p id="searchExecute_test" class='up'>▲ページ最上部へ</p></a>
+       <a href="#searchExecute_return"><p id="searchExecute_test" class='up'>▲ページ最上部へ</p></a>
     </body>
     
 </html>
