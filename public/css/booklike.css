@@ -3,6 +3,7 @@
 */
 body{
     margin: 0px;
+    background-color: #FFFFDf;
 }
 
 a{
@@ -53,79 +54,51 @@ a{
 
 .genre{
     text-align: center;
-    background-color: #FF9900;
-    margin-left: 380px;
-    margin-right: 380px;
-    margin-bottom: 0px
+    color:#808000;
+    
+   
+    margin-bottom: 10px;
 }
 
 .genre-contents{
+    border-bottom:solid #808000;
+    border-top:solid #808000;
     display: block;
-    width: 760px;
-    height: 170px;
-    background-color: #FFFFCC;
-    margin-left: 380px;
+    height: 70px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    
 } 
 
-.border-and-float{
-    border: solid;
-    border-radius: 3px;
+.float-left-comic{
     float: left;
+    margin-right: 30px;
+    margin-left: 130px
 }
 
-.clear{
-    clear: left;
+.float-left-novel{
+    float: left;
+    margin-right: 30px;
+    margin-left: 60px
 }
 
-.margin-padding-color-sf{
-    
-    padding: 10px 90px;
-    margin-left: 20px;
-    background-color: #00CCFF;
-    color:#fff;
+/*
+ジャンルの下にオリーブ色の線を追加
+*/
+
+.genre-line{
+    border-bottom:solid #808000;
 }
 
-.margin-padding-color-myst{
-    
-    padding: 10px 60px;
-    margin-left: 50px;
-    background-color:#CC6633;
-    color:#bbb;
-}
-
-.margin-padding-color-lo{
-    padding: 10px 84px;
-    margin-left: 50px;
-    background-color:#FFCCCC;
-    color:#00CCFF;
-}
-
-.margin-padding-color-ho{
-    padding: 10px 76px;
-    margin-left: 20px;
-    background-color: #000;
-    color:#f00;
-}
-
-.margin-padding-color-sh{
-    padding: 10px 84px;
-    margin-left: 50px;
-    background-color:#CCCC00;
-    color:#33FF33;
-}
-
-.margin-padding-color-fa{
-    padding: 10px 51.5px;
-    margin-left: 50px;
-    background-color:#3333FF;
-    color:#FF6600;
-}
 /*
 本の画像とタイトルの表示
 */
 .booktitle{
+    
+    
     float: left;
-    margin-right: 50px;
+    margin-left: 40px;
+   
 }
 
 .up{
@@ -187,7 +160,7 @@ a{
 */
 
 .rank1_background-color{
-    
+    background-color: #fff;
     border-bottom: solid 10px #fa0;
     border-top: solid 10px #fa0;
 }
@@ -203,7 +176,7 @@ a{
 }
 
 .rank2_background-color{
-    
+    background-color: #fff;
     border-bottom: solid 10px #bbb;
     border-top: solid 10px #bbb;
 }
@@ -218,7 +191,7 @@ a{
 }
 
 .rank3_background-color{
-    
+    background-color: #fff;
     border-bottom: solid 10px #930;
     border-top: solid 10px #930;
 }

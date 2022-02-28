@@ -22,12 +22,12 @@
         
     <form action="/comic/execute" method="POST">
         @csrf
-        <p class='border-and-float  margin-padding-color-sf'><input type="submit" name="boy" value="少年"></p>
-        <p class='border-and-float  margin-padding-color-myst'><input type="submit" name="girl" value="少女"></p>
-        <p class='border-and-float  margin-padding-color-lo'><input type="submit" name="youngman" value="青年"></p>
-        <p class='border-and-float  clear  margin-padding-color-ho'><input type="submit" name="ladies" value="レディース"></p>
-        <p class='border-and-float  margin-padding-color-sh'><input type="submit" name="library" value="文庫"></p>
-        <p class='border-and-float  margin-padding-color-fa'><input type="submit" name="other" value="その他"></p>
+        <p class='float-left-comic'><input type="submit" name="boy" value="少年"></p>
+        <p class='float-left-comic'><input type="submit" name="girl" value="少女"></p>
+        <p class='float-left-comic'><input type="submit" name="youngman" value="青年"></p>
+        <p class='float-left-comic'><input type="submit" name="ladies" value="レディース"></p>
+        <p class='float-left-comic'><input type="submit" name="library" value="文庫"></p>
+        <p class='float-left-comic'><input type="submit" name="other" value="その他"></p>
         
     </form>
     </div>
@@ -37,10 +37,7 @@
     <div class='booktitle'>
     
     <a href="/books/{{$books->id}}"><img src="{{$books->largeImageUrl}}" width="250" height="300"></a>
-    <p>{{$books->id}}</p>
-    <p>{{$books->booksGenreId}}</p>
     <a href="/books/{{$books->id}}"><p>{{Str::limit($books->title,30)}}</p></a>
-    
     
     </div>
     @endforeach

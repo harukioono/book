@@ -16,8 +16,14 @@
         <a href="/bookmark"><p class='headregion padding-m'>My本棚</p></a>
     </div>
     
-    <img src="{{$book->largeImageUrl}}" alt="画像無し" width="250" height="300">
-    <p>{{$book->title}}</p>
+    @if($book->largeImageUrl == NULL)
+       <a href="/books/{{$book->id}}"><img src="{{$book->largeImageUrl =  'https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/noimage_01.gif?_ex=200x20'}}"  width="250" height="300"></a>
+       <a href="/books/{{$book->id}}"><p>{{Str::limit($book->title,30)}}</p></a>
+     
+       @else
+       <a href="/books/{{$book->id}}"><img src="{{$book->largeImageUrl}}"  width="250" height="300"></a>
+       <a href="/books/{{$book->id}}"><p>{{Str::limit($book->title,30)}}</p></a>
+    @endif
     
 @if (Auth::check())
     @if ($bookmark)

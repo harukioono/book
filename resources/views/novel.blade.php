@@ -22,14 +22,14 @@
         
     <form action="/novel/execute" method="POST">
         @csrf
-        <p class='border-and-float  margin-padding-color-sf'><input type="submit" name="mystery-suspense" value="ミステリー・サスペンス"></p>
-        <p class='border-and-float  margin-padding-color-myst'><input type="submit" name="SF-horror" value="SF・ホラー"></p>
-        <p class='border-and-float  margin-padding-color-lo'><input type="submit" name="essay" value="エッセイ"></p>
-        <p class='border-and-float  clear  margin-padding-color-ho'><input type="submit" name="nonfiction" value="ノンフィクション"></p>
-        <p class='border-and-float  margin-padding-color-sh'><input type="submit" name="Japanesenovel" value="日本の小説"></p>
-        <p class='border-and-float  margin-padding-color-fa'><input type="submit" name="novel_of_other_countries" value="外国の小説"></p>
-        <p class='border-and-float margin-padding-color-fa'><input type="submit" name="romance" value="ロマンス"></p>
-        <p class='border-and-float margin-padding-color-fa'><input type="submit" name="other" value="その他"></p>
+        <p class='float-left-novel'><input type="submit" name="mystery-suspense" value="ミステリー・サスペンス"></p>
+        <p class='float-left-novel'><input type="submit" name="SF-horror" value="SF・ホラー"></p>
+        <p class='float-left-novel'><input type="submit" name="essay" value="エッセイ"></p>
+        <p class='float-left-novel'><input type="submit" name="nonfiction" value="ノンフィクション"></p>
+        <p class='float-left-novel'><input type="submit" name="Japanesenovel" value="日本の小説"></p>
+        <p class='float-left-novel'><input type="submit" name="novel_of_other_countries" value="外国の小説"></p>
+        <p class='float-left-novel'><input type="submit" name="romance" value="ロマンス"></p>
+        <p class='float-left-novel'><input type="submit" name="other" value="その他"></p>
     </form>
     
     </div>
@@ -37,14 +37,10 @@
         
     @foreach($book->unique('title') as $books)
     <div class='booktitle'>
-    
-    
+
     <a href="/books/{{$books->id}}"><img src="{{$books->largeImageUrl}}" width="250" height="300"></a>
-    <p>{{$books->id}}</p>
-    <p>{{$books->booksGenreId}}</p>
     <a href="/books/{{$books->id}}"><p>{{Str::limit($books->title,30)}}</p></a>
     
-   
     </div>
     @endforeach
         

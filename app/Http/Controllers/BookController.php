@@ -34,7 +34,7 @@ class BookController extends Controller
      //小説の画面の表示
     public function novel(Book $book)
     {
-        $book = Book::where('booksGenreId','like','001004%')->paginate(10);
+        $book = Book::where('booksGenreId','like','001004%')->paginate(50);
         
         return view('novel')->with([
             'book'=>$book
@@ -94,7 +94,7 @@ class BookController extends Controller
             }
         
         
-        $book = Book::where('booksGenreId','like',$i.'%')->paginate(10)->appends($request->except(['user_id']));
+        $book = Book::where('booksGenreId','like',$i.'%')->paginate(50)->appends($request->except(['user_id']));
         
         return view('novelExecute')->with([
                     'book'=>$book,
@@ -107,7 +107,7 @@ class BookController extends Controller
         
        
         
-         $book = Book::where('booksGenreId','like','001001%')->paginate(10);
+         $book = Book::where('booksGenreId','like','001001%')->paginate(50);
         
         return view('comic')->with([
             'book'=>$book
@@ -159,7 +159,7 @@ class BookController extends Controller
             }
         
         
-        $book = Book::where('booksGenreId','like',$i.'%')->paginate(10)->appends($request->except(['user_id']));
+        $book = Book::where('booksGenreId','like',$i.'%')->paginate(50)->appends($request->except(['user_id']));
         
         return view('comicExecute')->with([
                     'book'=>$book,
