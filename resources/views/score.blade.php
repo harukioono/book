@@ -2,6 +2,7 @@
 <html lang="ja">
     <head>
         <meta charset="UTF-8">
+        <meta name=”viewport” content=”width=device-width,initial-scale=1.0″>
         <title>BookLike</title>
         <link rel="stylesheet" href="{{ asset('css/booklike.css') }}">
     
@@ -19,10 +20,12 @@
     @if($book->largeImageUrl == NULL)
        <img src="{{$book->largeImageUrl =  'https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/noimage_01.gif?_ex=200x20'}}"  width="250" height="300">
        <p>{{$book->title}}</p>
+       <p>作者：{{$book->author}}</p>
      
        @else
        <img src="{{$book->largeImageUrl}}"  width="250" height="300">
        <p>{{$book->title}}</p>
+       <p>作者：{{$book->author}}</p>
     @endif
     
 @if (Auth::check())

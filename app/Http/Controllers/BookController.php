@@ -354,7 +354,9 @@ class BookController extends Controller
                 
                 
                 //本のタイトルであいまい検索
-                $title = $groupby->where('title','like', '%' .$keyword. '%')->orderBy('title','asc')->paginate(10)->appends($request->except(['user_id']));
+                $title = $groupby->where('title','like', '%' .$keyword. '%')->orderBy('title','asc')->paginate(20)->appends($request->except(['user_id']));
+                
+                $title = $groupby->where('author','like', '%' .$keyword. '%')->orderBy('title','asc')->paginate(20)->appends($request->except(['user_id']));
                 
              
                return view('searchExecute')->with([
