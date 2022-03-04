@@ -17,12 +17,12 @@
     </div>
     
     @if($book->largeImageUrl == NULL)
-       <a href="/books/{{$book->id}}"><img src="{{$book->largeImageUrl =  'https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/noimage_01.gif?_ex=200x20'}}"  width="250" height="300"></a>
-       <a href="/books/{{$book->id}}"><p>{{Str::limit($book->title,30)}}</p></a>
+       <img src="{{$book->largeImageUrl =  'https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/noimage_01.gif?_ex=200x20'}}"  width="250" height="300">
+       <p>{{$book->title}}</p>
      
        @else
-       <a href="/books/{{$book->id}}"><img src="{{$book->largeImageUrl}}"  width="250" height="300"></a>
-       <a href="/books/{{$book->id}}"><p>{{Str::limit($book->title,30)}}</p></a>
+       <img src="{{$book->largeImageUrl}}"  width="250" height="300">
+       <p>{{$book->title}}</p>
     @endif
     
 @if (Auth::check())

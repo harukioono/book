@@ -15,6 +15,14 @@
         <a href="/ranking"><p class='headregion padding-r'>ランキング</p></a>
         <a href="/bookmark"><p class='headregion padding-m'>My本棚</p></a>
     </div>
+    
+    <script src="{{ asset('/js/ranking.js') }}"></script>
+    
+        <div onclick="RankingA()"><p class='block'>ランキングとは？</p></div>
+        
+        
+        <div><p id="ranking" class='ranking-explanations'>ランキングは本の評価点数の平均値を高い順に上位三位の表紙・タイトル・評価点数の平均を表示しています&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<span onclick="RankingB()" class='cross'>×</span></p></div>
+    
         <p class='ranking'>ランキング</p>
         <div class='ranking_placing'>
        @foreach($scores as $index=> $score)

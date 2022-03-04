@@ -152,6 +152,7 @@ a{
 	color: transparent;
 	background: repeating-linear-gradient(0deg, #B67B03 0.1em, #DAAF08 0.2em, #FEE9A0 0.3em, #DAAF08 0.4em, #B67B03 0.5em); 
 	-webkit-background-clip: text;
+	clear: left;
 }
 
 
@@ -218,9 +219,86 @@ a{
 }
 
 /*
+検索ボックスと保存ボタンの位置調整
+*/
+
+.search{
+    float: left;
+}
+
+.save{
+    clear: left;
+}
+
+/*
 検索ボタンを非表示にする
 */
 
 .searchButton{
     visibility:hidden;
+}
+
+/*
+説明文を非表示にする
+*/
+
+
+/*これはランキングの説明*/
+.ranking-explanations{
+    float: left;
+    font-size: 15px;
+    background-color: #fff;
+    margin-top: 10px;
+    height: 70px;
+    width: 320px; 
+    border:solid 2px #000;
+    visibility:hidden;
+}
+
+/*これは検索機能の説明*/
+.search-explanations{
+    float: left;
+    font-size: 15px;
+    background-color: #fff;
+    margin-top: 20px;
+    height: 110px;
+    width: 320px; 
+    border:solid 2px #000;
+    visibility:hidden;
+}
+
+
+/*
+説明文を表示するためにクリックするものを装飾
+*/
+
+.block{
+    float: left;
+    height: 20px;
+    width: 115px;
+    cursor: pointer;
+    font-size:  12px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-left: 20px;
+    background-color:#7fffd4;
+    border:solid 2px #006400;
+    color: #006400;
+}
+
+/*
+説明文の×マークの調整
+*/
+.cross{
+    font-size: 10px;
+    border-radius: 50%;
+    border: solid 1px #f00;
+    cursor: pointer;
+    color: #f00;
+    padding-left: 3px;
+    padding-right: 3px;
+    
 }

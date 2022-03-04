@@ -16,12 +16,12 @@
         <a href="/bookmark"><p class='headregion padding-m'>My本棚</p></a>
     </div>
         
-    <script src="{{ asset('/js/book.js') }}"></script>
+    <script src="{{ asset('/js/search.js') }}"></script>
         
-       <form id="form1" name="searchForm" action="/search/execute" method="POST">
+       <form class='search' name="searchForm" action="/search/execute" method="POST">
            @csrf
         <input id="sbox1" id="s" name="booklist" type="text" placeholder="作品名・作者名を入力" oninput="SearchButton_Click()"/>
-        <input class='searchButton' id="sbtn1" name="search" type="submit" value="検索" onkeydown="SearchButton_KeyDown()"/>
+        <input class='searchButton' id="sbtn1" name="search" type="submit" value="検索" />
        </form>
        
        <a href="#searchExecute_test"><p id="searchExecute_return" class='up'>▼ページ最下部へ</p></a>
