@@ -33,11 +33,11 @@ a{
     margin: 0px;
     text-align: center;
     color: #fff;
-    width: 20px;
+    width: 135px;
     flex-wrap: wrap;
     background-color: #99CC99;
     border:  solid 1px #00CC66;
-    padding: 20px 30px;
+    padding: 20px 60px;
 }
 
 
@@ -335,7 +335,7 @@ a{
     margin: 0px;
     text-align: center;
     color: #123;
-    width: 135px;
+    width: 67.5px;
     flex-wrap: wrap;
     background-color: #99CC99;
     border:  solid 1px #00CC66;
