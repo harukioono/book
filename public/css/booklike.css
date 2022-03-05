@@ -332,14 +332,15 @@ a{
 
 .headregion{
     
+    font-size: 10px;
     margin: 0px;
     text-align: center;
-    color: #123;
-    width: 67.5px;
+    color: #fff;
+    width: 60px;
     flex-wrap: wrap;
     background-color: #99CC99;
     border:  solid 1px #00CC66;
-    padding: 20px 60px;
+    padding: 20px 51px;
 }
 
 
@@ -379,13 +380,13 @@ a{
 .float-left-comic{
     float: left;
     margin-right: 30px;
-    margin-left: 130px
+    margin-left: 70px;
 }
 
 .float-left-novel{
     float: left;
-    margin-right: 30px;
-    margin-left: 60px
+    
+    margin-left: 30px;
 }
 
 /*
