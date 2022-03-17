@@ -10,18 +10,31 @@ use Illuminate\Support\Facades\Auth;
 
 class ScoreController extends Controller
 {
-    //クリックした本のタイトルのidを取得&ブックマークボタンの実装
+    //クリックした本のタイトルのidを取得 & 同じ作者の本を表示 & ブックマークボタンの実装
     public function search(Book $book,Bookmark $bookmark)
     {
         $id = $book->id;
         
+        //クリックした本と同じ作者が書いたもの & クリックした本と同じタイトルではないもの & 作者名が分かっているもの（authorがNULLではないもの）
+        $authors = Book::where('author','like','%'.$book->author.'%')->whereNotIn('title',[$book->title])->whereNotNull('author')->get();
         
+        //$authorsの条件に該当するデータの個数を数える
+        $authors_count = count($authors);
+        
+        //クリックした本と同じジャンルのもの & クリックした本と同じタイトルではないもの & ジャンル分け出来るもの（booksGenreIdがNULLではないもの）
+        $booksGenreIds = Book::where('booksGenreId','like','%'.$book->booksGenreId.'%')->whereNotIn('title',[$book->title])->whereNotNull('booksGenreId')->get();
+        
+        //$booksGenreIdsの条件に該当するデータの個数を数える
+        $booksGenreIds_count = count($booksGenreIds);
+        
+        
+        //クリックした本のbookテーブルのidがbookmarkテーブルに存在するかどうかをexists()で確認
         $bookmark=Bookmark::where('book_id',$id)->exists();
         
-       //dd($bookmark);
+        
        
         
-        return view('score')->with(['book'=>$book, 'bookmark'=>$bookmark]);
+        return view('score')->with(['book'=>$book, 'authors'=>$authors, 'authors_count'=>$authors_count, 'booksGenreIds'=>$booksGenreIds, 'booksGenreIds_count'=>$booksGenreIds_count,'bookmark'=>$bookmark]);
     }
     
     //点数とコメントを表示

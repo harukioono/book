@@ -54,7 +54,7 @@ class BookController extends Controller
             //「SF・ホラー」のボタンが押されたら
             if(isset($request["SF-horror"]))
             {
-                $i = '001004001';
+                $i = '001004002';
             }
             
             //「エッセイ」のボタンが押されたら

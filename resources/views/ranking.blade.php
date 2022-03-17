@@ -27,10 +27,21 @@
         <p class='ranking'>ランキング</p>
         <div class='ranking_placing'>
        @foreach($scores as $index=> $score)
-       <p class='rank{{(string)((int)$index+1)}}_background-color'><span class='rank{{(string)((int)$index+1)}}'>{{(string)((int)$index+1)}}</span><span class='ranks{{(string)((int)$index+1)}}'>位</span></p>
-        <img src="{{$score->book->largeImageUrl}}"  width="400" height="450">
-        <p>{{$score->book->title}}</p>
-        <p>{{$score->avg}}</p>
+        <p class='rank{{(string)((int)$index+1)}}_background-color'><span class='rank{{(string)((int)$index+1)}}'>{{(string)((int)$index+1)}}</span><span class='ranks{{(string)((int)$index+1)}}'>位</span></p>
+        
+        @if($score->book->largeImageUrl == NULL)
+       <a href="/books/{{$score->book->id}}"><img src="{{$score->book->largeImageUrl =  'https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/noimage_01.gif?_ex=200x20'}}"  width="400" height="450"></a>
+       <a href="/books/{{$score->book->id}}"><p>{{$score->book->title}}</p></a>
+       <p>作者：<a href="/books/{{$score->book->id}}">{{$score->book->author}}</p></a>
+       <p>点数：{{$score->avg}}</p>
+       
+       @else
+        <a href="/books/{{$score->book->id}}"><img src="{{$score->book->largeImageUrl}}"  width="400" height="450"></a>
+        <a href="/books/{{$score->book->id}}"><p>{{$score->book->title}}</p></a>
+        <p>筆者：<a href="/books/{{$score->book->id}}">{{$score->book->author}}</p></a>
+        <p>点数：{{$score->avg}}</p>
+        @endif
+        
         @endforeach
         </div>
     </body>

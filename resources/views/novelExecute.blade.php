@@ -22,8 +22,8 @@
     <div class='genre-contents'>
     <form action="/novel/execute" method="POST">
         @csrf
-        <p class='float-left-novel'><input type="submit" name="mystery-suspense" value="ミステリー・サスペンス"></p>
-        <p class='float-left-novel'><input type="submit" name="SF-horror" value="SF・ホラー"></p>
+        <p class='float-left-novel'><input type="submit" name="mystery_suspense" value="ミステリー・サスペンス"></p>
+        <p class='float-left-novel'><input type="submit" name="SF_horror" value="SF・ホラー"></p>
         <p class='float-left-novel'><input type="submit" name="essay" value="エッセイ"></p>
         <p class='float-left-novel'><input type="submit" name="nonfiction" value="ノンフィクション"></p>
         <p class='float-left-novel'><input type="submit" name="Japanesenovel" value="日本の小説"></p>

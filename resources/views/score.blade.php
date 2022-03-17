@@ -56,8 +56,62 @@
           <input type="hidden" name="book_id" value="{{$book->id}}">
       <p>評価：</p><input id="sbox1" id="s" name="book[score]" type="number" max="10" min="0" placeholder="0~10" />
       <input id="sbox1" id="s" name="book[comment]" type="text" placeholder="感想等をご自由にどうぞ。" />
-      <input id="sbtn1" name="score" type="submit" value="送信" />    
+      <input id="sbtn1" name="score" type="submit" value="送信" /> <br>   
       
       
+      
+      <p>＜同じ作者の本＞</p>
+      
+@if($book->author != NULL)      
+
+  @foreach($authors->unique('title') as $author)
+  
+ <div class='booktitle'>
+  
+   @if($author->largeImageUrl == NULL)
+   <a href="/books/{{$author->id}}"><img src="{{$author->largeImageUrl =  'https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/noimage_01.gif?_ex=200x20'}}"  width="250" height="300"></a>
+   @else
+   <a href="/books/{{$author->id}}"><img src="{{$author->largeImageUrl}}"  width="250" height="300"></a>
+   @endif
+  <a href="/books/{{$author->id}}"><p>{{Str::limit($author->title,30)}}</p></a>
+  <p>筆者：{{Str::limit($author->author,20)}}</p>
+  
+  </div>
+  
+  @endforeach
+
+@endif
+
+@if($book->author == NULL || $authors_count == '0' )
+<p>存在しません</p>
+@endif
+
+
+
+
+
+<p class='up'>＜同じジャンルの本＞</p>
+
+@if($book->booksGenreId != NULL)      
+
+  @foreach($booksGenreIds->unique('title') as $booksGenreId)
+  
+     <div class='booktitle'>
+  
+  <a href="/books/{{$booksGenreId->id}}"><img src="{{$booksGenreId->largeImageUrl}}"  width="250" height="300"></a>
+  <a href="/books/{{$booksGenreId->id}}"><p>{{Str::limit($booksGenreId->title,30)}}</p></a>
+  <p>筆者：{{Str::limit($booksGenreId->author,20)}}</p>
+  
+  </div>
+  
+  @endforeach
+
+@endif
+
+@if($book->booksGenreId == NULL || $booksGenreIds_count == '0' )
+<p>存在しません</p>
+@endif
+
+
     </body>
 </html>

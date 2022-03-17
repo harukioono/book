@@ -34,15 +34,13 @@
    <div class='booktitle'>
        @if($book->largeImageUrl == NULL)
        <a href="/books/{{$book->id}}"><img src="{{$book->largeImageUrl =  'https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/noimage_01.gif?_ex=200x20'}}"  width="250" height="300"></a>
-       <a href="/books/{{$book->id}}"><p>{{Str::limit($book->title,30)}}</p></a>
-       <p>作者：<a href="/books/{{$book->id}}">{{Str::limit($book->author,20)}}</p></a>
-     
        @else
        <a href="/books/{{$book->id}}"><img src="{{$book->largeImageUrl}}"  width="250" height="300"></a>
+        @endif
        <a href="/books/{{$book->id}}"><p>{{Str::limit($book->title,30)}}</p></a>
        <p>作者：<a href="/books/{{$book->id}}">{{Str::limit($book->author,20)}}</p></a>
 
-       @endif
+      
    </div>
 　 
      

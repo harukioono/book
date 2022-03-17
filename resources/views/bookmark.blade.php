@@ -20,8 +20,16 @@
         
         @foreach($bookmarks as $bookmark)
         <div class='booktitle'>
-        <a href="/books/{{$bookmark->book->id}}"><img src="{{$bookmark->book->largeImageUrl}}" width="250" height="300"></a>
-       <a href="/books/{{$bookmark->book->id}}"><p>{{Str::limit($bookmark->book->title,30)}}</p></a>
+        @if($bookmark->book->largeImageUrl == NULL)
+       <a href="/books/{{$bookmark->book->id}}"><img src="{{$bookmark->book->largeImageUrl =  'https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/noimage_01.gif?_ex=200x20'}}"  width="250" height="300"></a>
+       <a href="/books/{{$bookmark->book->id}}"><p>{{$bookmark->book->title}}</p></a>
+       <p>作者：<a href="/books/{{$bookmark->book->id}}">{{$bookmark->book->author}}</p></a>
+       
+       @else
+        <a href="/books/{{$bookmark->book->id}}"><img src="{{$bookmark->book->largeImageUrl}}"  width="250" height="300"></a>
+        <a href="/books/{{$bookmark->book->id}}"><p>{{$bookmark->book->title}}</p></a>
+        <p>筆者：<a href="/books/{{$bookmark->book->id}}">{{$bookmark->book->author}}</p></a>
+        @endif
        </div>
         @endforeach
         
