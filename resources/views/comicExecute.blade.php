@@ -17,9 +17,9 @@
         <a href="/bookmark"><p class='headregion padding-m'>My本棚</p></a>
     </div>
         
-    <script src="{{ asset('/js/comic.js') }}"></script>
+         <script src="{{ asset('/js/comic.js') }}"></script>
         
-        <a href="#comic_test"><p id="comic_return">▼ページ最下部へ</p></a>
+        <a href="#comicExecute_test"><p id="comicExecute_return">▼ページ最下部へ</p></a>
         <h2 class='genre'>ジャンル(漫画)</h2>
     <div class='genre-contents'>
     
