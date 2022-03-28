@@ -17,20 +17,24 @@
         <a href="/bookmark"><p class='headregion padding-m'>My本棚</p></a>
     </div>
         
-        <a href="#comicExecute_test"><p id="comicExecute_return">▼ページ最下部へ</p></a>
+    <script src="{{ asset('/js/comic.js') }}"></script>
+        
+        <a href="#comic_test"><p id="comic_return">▼ページ最下部へ</p></a>
         <h2 class='genre'>ジャンル(漫画)</h2>
     <div class='genre-contents'>
-        
+    
+    
     <form action="/comic/execute" method="POST">
         @csrf
-        <p class='float-left-comic'><input type="submit" name="boy" value="少年"></p>
-        <p class='float-left-comic'><input type="submit" name="girl" value="少女"></p>
-        <p class='float-left-comic'><input type="submit" name="youngman" value="青年"></p>
-        <p class='float-left-comic'><input type="submit" name="ladies" value="レディース"></p>
-        <p class='float-left-comic'><input type="submit" name="library" value="文庫"></p>
-        <p class='float-left-comic'><input type="submit" name="other" value="その他"></p>
+        <p class='float-left-comic'><input class='background-color-comic' type="submit" name="boy" value="少年" onmouseover="over(this)" onmouseleave="leave(this)"></p>
+        <p class='float-left-comic'><input class='background-color-comic' type="submit" name="girl" value="少女" onmouseover="over(this)" onmouseleave="leave(this)"></p>
+        <p class='float-left-comic'><input class='background-color-comic' type="submit" name="youngman" value="青年" onmouseover="over(this)" onmouseleave="leave(this)"></p>
+        <p class='float-left-comic'><input class='background-color-comic' type="submit" name="ladies" value="レディース" onmouseover="over(this)" onmouseleave="leave(this)"></p>
+        <p class='float-left-comic'><input class='background-color-comic' type="submit" name="library" value="文庫" onmouseover="over(this)" onmouseleave="leave(this)"></p>
+        <p class='float-left-comic'><input class='background-color-comic' type="submit" name="other" value="その他" onmouseover="over(this)" onmouseleave="leave(this)"></p>
         
     </form>
+    
     </div>
     <p>earvzvr</p>
     
