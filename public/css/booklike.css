@@ -61,8 +61,6 @@ a{
 .genre{
     text-align: center;
     color:#808000;
-    
-   
     margin-bottom: 10px;
 }
 
@@ -71,21 +69,45 @@ a{
     border-top:solid #808000;
     display: block;
     height: 70px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     background-color: #fff;
     
 } 
 
 .float-left-comic{
+    margin-top: 0px;
     float: left;
-    margin-right: 30px;
-    margin-left: 130px
+}
+
+.background-color-comic{
+    background-color: #fff;
+    color: #808000;
+    width: 253.2px;
+    font-size: 10pt;
+    text-align: center;
+    padding: 24px 20px;
+    transition: .3s;
+    border:1px solid #808000;
+    flex-wrap: wrap;
+    cursor: pointer;
 }
 
 .float-left-novel{
+    margin-top: 0px;
     float: left;
-    margin-right: 30px;
-    margin-left: 60px
+}
+
+.background-color-novel{
+    background-color: #fff;
+    color: #808000;
+    width: 189.9px;
+    font-size: 10pt;
+    text-align: center;
+    padding: 24px 20px;
+    transition: .3s;
+    border:1px solid #808000;
+    flex-wrap: wrap;
+    cursor: pointer;
 }
 
 /*

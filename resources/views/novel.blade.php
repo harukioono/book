@@ -16,21 +16,26 @@
         <a href="/ranking"><p class='headregion padding-r'>ランキング</p></a>
         <a href="/bookmark"><p class='headregion padding-m'>My本棚</p></a>
     </div>
+    
+    <script src="{{ asset('/js/novel.js') }}"></script>
        
         <a href="#novel_test"><p id="novel_return" class='up'>▼ページ最下部へ</p></a> 
         <h2 class='genre'>ジャンル(小説)</h2>
+        
+       
+        
     <div class='genre-contents'>
         
-    <form action="/novel/execute" method="POST">
+    <form name="novel_genre" action="/novel/execute" method="POST">
         @csrf
-        <p class='float-left-novel'><input type="submit" name="mystery-suspense" value="ミステリー・サスペンス"></p>
-        <p class='float-left-novel'><input type="submit" name="SF-horror" value="SF・ホラー"></p>
-        <p class='float-left-novel'><input type="submit" name="essay" value="エッセイ"></p>
-        <p class='float-left-novel'><input type="submit" name="nonfiction" value="ノンフィクション"></p>
-        <p class='float-left-novel'><input type="submit" name="Japanesenovel" value="日本の小説"></p>
-        <p class='float-left-novel'><input type="submit" name="novel_of_other_countries" value="外国の小説"></p>
-        <p class='float-left-novel'><input type="submit" name="romance" value="ロマンス"></p>
-        <p class='float-left-novel'><input type="submit" name="other" value="その他"></p>
+        <p class='float-left-novel'><input class='background-color-novel' type="submit" name="mystery-suspense" value="ミステリー・サスペンス" onmouseover="over(this)" onmouseleave="leave(this)"></p>
+        <p class='float-left-novel'><input class='background-color-novel' type="submit" name="SF-horror" value="SF・ホラー" onmouseover="over(this)" onmouseleave="leave(this)"></p>
+        <p class='float-left-novel'><input class='background-color-novel' type="submit" name="essay" value="エッセイ" onmouseover="over(this)" onmouseleave="leave(this)"></p>
+        <p class='float-left-novel'><input class='background-color-novel' type="submit" name="nonfiction" value="ノンフィクション" onmouseover="over(this)" onmouseleave="leave(this)"></p>
+        <p class='float-left-novel'><input class='background-color-novel' type="submit" name="Japanesenovel" value="日本の小説" onmouseover="over(this)" onmouseleave="leave(this)"></p>
+        <p class='float-left-novel'><input class='background-color-novel' type="submit" name="novel_of_other_countries" value="外国の小説" onmouseover="over(this)" onmouseleave="leave(this)"></p>
+        <p class='float-left-novel'><input class='background-color-novel' type="submit" name="romance" value="ロマンス" onmouseover="over(this)" onmouseleave="leave(this)"></p>
+        <p class='float-left-novel'><input class='background-color-novel' type="submit" name="other" value="その他" onmouseover="over(this)" onmouseleave="leave(this)"></p>
     </form>
     
     </div>

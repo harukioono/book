@@ -353,7 +353,7 @@ class BookController extends Controller
                 $groupby = Book::select('id','title','author','largeImageUrl')->groupBy('title')->groupBy('author')->groupBy('id')->groupBy('largeImageUrl');
                 
                 
-                //本のタイトルであいまい検索
+                //本のタイトルと作者名であいまい検索
                 $title = $groupby->where('title','like', '%' .$keyword. '%')->orwhere('author','like', '%' .$keyword. '%')->orderBy('title','asc')->paginate(20)->appends($request->except(['user_id']));
                 
              
